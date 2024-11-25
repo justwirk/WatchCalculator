@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D35C3C112C6A40A100A730CD /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35C3C102C6A40A100A730CD /* DayView.swift */; };
+		D35C3C132C6B3C6500A730CD /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35C3C122C6B3C6500A730CD /* AddNoteView.swift */; };
 		D3B770122C66157E00C2D485 /* WatchCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B770112C66157E00C2D485 /* WatchCalculatorApp.swift */; };
 		D3B770142C66157E00C2D485 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B770132C66157E00C2D485 /* ContentView.swift */; };
-		D3B770162C66157E00C2D485 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B770152C66157E00C2D485 /* Item.swift */; };
 		D3B770182C66158000C2D485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3B770172C66158000C2D485 /* Assets.xcassets */; };
 		D3B7701B2C66158000C2D485 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3B7701A2C66158000C2D485 /* Preview Assets.xcassets */; };
 		D3B770252C66158000C2D485 /* WatchCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B770242C66158000C2D485 /* WatchCalculatorTests.swift */; };
 		D3B7702F2C66158000C2D485 /* WatchCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B7702E2C66158000C2D485 /* WatchCalculatorUITests.swift */; };
 		D3B770312C66158000C2D485 /* WatchCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B770302C66158000C2D485 /* WatchCalculatorUITestsLaunchTests.swift */; };
+		D3B7703E2C662DD700C2D485 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B7703D2C662DD700C2D485 /* Shift.swift */; };
+		D3B770402C662E2600C2D485 /* ShiftListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B7703F2C662E2600C2D485 /* ShiftListView.swift */; };
+		D3B770422C662F9000C2D485 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B770412C662F9000C2D485 /* UserSettings.swift */; };
+		D3B770442C662FAB00C2D485 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B770432C662FAB00C2D485 /* User.swift */; };
+		D3B770462C662FDA00C2D485 /* UserSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B770452C662FDA00C2D485 /* UserSettingsView.swift */; };
+		D3B770482C66577D00C2D485 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B770472C66577D00C2D485 /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D35C3C102C6A40A100A730CD /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		D35C3C122C6B3C6500A730CD /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
 		D3B7700E2C66157E00C2D485 /* WatchCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B770112C66157E00C2D485 /* WatchCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCalculatorApp.swift; sourceTree = "<group>"; };
 		D3B770132C66157E00C2D485 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D3B770152C66157E00C2D485 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		D3B770172C66158000C2D485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3B7701A2C66158000C2D485 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D3B770202C66158000C2D485 /* WatchCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +54,12 @@
 		D3B7702A2C66158000C2D485 /* WatchCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B7702E2C66158000C2D485 /* WatchCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCalculatorUITests.swift; sourceTree = "<group>"; };
 		D3B770302C66158000C2D485 /* WatchCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D3B7703D2C662DD700C2D485 /* Shift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
+		D3B7703F2C662E2600C2D485 /* ShiftListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftListView.swift; sourceTree = "<group>"; };
+		D3B770412C662F9000C2D485 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		D3B770432C662FAB00C2D485 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D3B770452C662FDA00C2D485 /* UserSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsView.swift; sourceTree = "<group>"; };
+		D3B770472C66577D00C2D485 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,11 +110,14 @@
 		D3B770102C66157E00C2D485 /* WatchCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				D3C184A72C6C93A000EF0705 /* View */,
 				D3B770112C66157E00C2D485 /* WatchCalculatorApp.swift */,
 				D3B770132C66157E00C2D485 /* ContentView.swift */,
-				D3B770152C66157E00C2D485 /* Item.swift */,
 				D3B770172C66158000C2D485 /* Assets.xcassets */,
 				D3B770192C66158000C2D485 /* Preview Content */,
+				D3B7703D2C662DD700C2D485 /* Shift.swift */,
+				D3B770412C662F9000C2D485 /* UserSettings.swift */,
+				D3B770432C662FAB00C2D485 /* User.swift */,
 			);
 			path = WatchCalculator;
 			sourceTree = "<group>";
@@ -128,6 +145,18 @@
 				D3B770302C66158000C2D485 /* WatchCalculatorUITestsLaunchTests.swift */,
 			);
 			path = WatchCalculatorUITests;
+			sourceTree = "<group>";
+		};
+		D3C184A72C6C93A000EF0705 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D35C3C122C6B3C6500A730CD /* AddNoteView.swift */,
+				D3B770472C66577D00C2D485 /* CalendarView.swift */,
+				D35C3C102C6A40A100A730CD /* DayView.swift */,
+				D3B770452C662FDA00C2D485 /* UserSettingsView.swift */,
+				D3B7703F2C662E2600C2D485 /* ShiftListView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,8 +290,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3B770142C66157E00C2D485 /* ContentView.swift in Sources */,
-				D3B770162C66157E00C2D485 /* Item.swift in Sources */,
+				D3B7703E2C662DD700C2D485 /* Shift.swift in Sources */,
+				D3B770482C66577D00C2D485 /* CalendarView.swift in Sources */,
+				D3B770442C662FAB00C2D485 /* User.swift in Sources */,
+				D35C3C132C6B3C6500A730CD /* AddNoteView.swift in Sources */,
+				D35C3C112C6A40A100A730CD /* DayView.swift in Sources */,
 				D3B770122C66157E00C2D485 /* WatchCalculatorApp.swift in Sources */,
+				D3B770422C662F9000C2D485 /* UserSettings.swift in Sources */,
+				D3B770462C662FDA00C2D485 /* UserSettingsView.swift in Sources */,
+				D3B770402C662E2600C2D485 /* ShiftListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

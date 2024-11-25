@@ -4,58 +4,69 @@
 //
 //  Created by Emre Yılmaz on 9.08.2024.
 //
-
 import SwiftUI
-import SwiftData
+
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+    @State private var startDate = Date()
+    @State private var workDays = 2
+    @State private var restDays = 2
+    @State private var monthsToCalculate = 1
+    
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
+        NavigationView {
+            VStack {
+                DatePicker("Başlangıç Tarihi", selection: $startDate, displayedComponents: .date)
+                    .padding()
+                
+                Stepper(value: $workDays, in: 1...10) {
+                    Text("Çalışma Günleri: \(workDays)")
+                }.padding()
+
+                Stepper(value: $restDays, in: 1...10) {
+                    Text("İzin Günleri: \(restDays)")
+                }.padding()
+
+                Stepper(value: $monthsToCalculate, in: 1...12) {
+                    Text("Hesaplanacak Ay: \(monthsToCalculate)")
+                }.padding()
+                
+                NavigationLink(destination: CalendarView(shiftDates: calculateShiftDates(), monthsToCalculate: monthsToCalculate)) {
+                    Text("Hesapla ve Takvimi Göster")
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(10)
                 }
-                .onDelete(perform: deleteItems)
+                .padding()
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
+            .navigationBarTitle("Nöbet Hesaplayıcı")
         }
     }
+    
+    private func calculateShiftDates() -> [Date] {
+        var dates: [Date] = []
+        var currentDate = startDate
+        let calendar = Calendar.current
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+        let endDate = calendar.date(byAdding: .month, value: monthsToCalculate, to: startDate)!
+        
+        while currentDate < endDate {
+            // Çalışma günleri ekle
+            for _ in 0..<workDays {
+                if currentDate < endDate {
+                    dates.append(currentDate)
+                }
+                currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate) ?? currentDate
             }
+            // İzin günleri atla
+            currentDate = calendar.date(byAdding: .day, value: restDays, to: currentDate) ?? currentDate
         }
+        
+        return dates
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }
